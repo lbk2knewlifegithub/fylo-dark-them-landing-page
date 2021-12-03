@@ -1,0 +1,11 @@
+<article class="container">
+  <!-- quotes -->
+  <img class="max-w-[30px]" src="/assets/images/bg-quotes.png" alt="Quotes">
+  <!-- end quotes -->
+
+  <div class="flex flex-wrap gap-10">
+    <ng-container *ngFor="let testimonial of testimonials">
+      <lbk-testimonial-card class="block flex-1" [testimonial]="testimonial"></lbk-testimonial-card>
+    </ng-container>
+  </div>
+</article>

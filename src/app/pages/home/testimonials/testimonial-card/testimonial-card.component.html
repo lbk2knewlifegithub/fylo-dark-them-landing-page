@@ -1,0 +1,23 @@
+<div class="p-8 bg-testimonials rounded-lg max-w-lg min-w-[300px] mx-auto">
+  <!-- comment -->
+  <p class="font-medium">{{testimonial.comment}}</p>
+  <!-- end comment -->
+
+  <!-- profile -->
+  <div class="mt-6 flex gap-4 items-center">
+    <!-- avatar -->
+    <img class="rounded-full w-12 h-12" [src]="testimonial.src" [alt]="testimonial.name">
+    <!-- end avatar -->
+
+    <div class="">
+      <!-- name  -->
+      <h3 class="font-heading font-bold text-lg">{{testimonial.name}}</h3>
+      <!-- end name  -->
+
+      <!-- position -->
+      <p class="text-muted">{{testimonial.position}}</p>
+      <!-- end position -->
+    </div>
+  </div>
+  <!-- end profile -->
+</div>

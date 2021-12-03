@@ -5,40 +5,44 @@
 
 @layer base {
   :root {
-    // colors
+    /////////////////////////
+    // colors //////////////
+    /////////////////////////
     --white: 0, 0%, 100%;
-    --black: 0, 0% 0%;
-    --red: 0, 100%, 74%;
-    --green: 154, 59%, 51%;
-    --blue: 248, 32%, 49%;
-    --dark-blue: 249, 10%, 26%;
-    --grayish-blue: 246, 25%, 77%;
+    --light-gray: 0, 0%, 80%;
+
+    // inside call-to-action gradient
+    --cyan: 176, 68%, 64%;
+    // inside call-to-action gradient
+    --blue: 198, 60%, 50%;
+
+    --light-red: 0, 100%, 63%;
+
+    ///////////////////////////
+    // background colors /////
+    ///////////////////////////
+    // intro and email sign up background
+    --bg-muted: 217, 28%, 15%;
+    // --bg-fill: 218, 28%, 13%;
+    --bg-fill: 217, 28%, 15%;
+    --bg-accent: 218, 28%, 13%;
+    --bg-footer: 216, 53%, 9%;
+    --bg-testimonials: 219, 30%, 18%;
 
     ////////////////////
     // text colors /////
     ////////////////////
     --text-fill: var(--white);
-    --text-muted: var(--grayish-blue);
-    --text-inverted: var(--gray-blue);
-    --text-danger: var(--red);
-
-    /////////////////////////////
-    // background colors /////////
-    /////////////////////////////
-    --bg-fill: var(--red);
-    --bg-form: var(--white);
-
-    /////////////////////////////
-    // background button colors /////////
-    /////////////////////////////
-    --bg-button-primary: var(--blue);
-    --bg-button-success: var(--green);
+    --text-muted: var(--light-gray);
+    --text-inverted: var(--white);
+    --text-danger: var(--light-red);
+    --text-accent: var(--cyan);
 
     /////////////////////////////
     // border colors /////////////
     /////////////////////////////
-    --border-fill: var(--grayish-blue);
-    --border-danger: var(--red);
+    --border-danger: var(--light-red);
+    --border-accent: var(--cyan);
   }
 
   //make default form look nice
@@ -57,12 +61,7 @@
   [multiple],
   textarea,
   select {
-    @apply w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500;
-  }
-
-  [type="checkbox"],
-  [type="radio"] {
-    @apply border-gray-300 rounded text-indigo-600 focus:ring-indigo-500;
+    @apply text-black w-full;
   }
 }
 
@@ -71,19 +70,18 @@ input.ng-invalid.ng-touched {
 }
 
 @layer components {
-  .filter-white {
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(112deg)
-      brightness(103%) contrast(101%);
+  .container-large {
+    max-width: 1536px;
+    margin: 0 auto;
   }
 
   //CUSTOM APPLY HERE
   .btn {
-    @apply inline-block text-white font-bold text-center rounded-lg py-4;
+    @apply inline-block text-inverted tracking-wide font-bold text-center py-4 rounded-full px-20 cursor-pointer;
   }
 
   .btn-primary {
-    @apply bg-button-primary;
-    box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.15);
+    @apply bg-gradient-to-r from-cyan to-blue sm:px-28 sm:text-lg hover:to-cyan;
   }
 
   .btn-success {

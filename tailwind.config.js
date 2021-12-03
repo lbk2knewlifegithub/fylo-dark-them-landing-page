@@ -33,36 +33,40 @@ module.exports = {
     extend: {
       // create custom fonts here
       fontFamily: {
-        heading: "'LoraRegular', 'serif'",
-        mono: ["'DMMonoRegular'", ...defaultTheme.fontFamily.mono],
+        heading: "'Raleway', 'serif'",
+        mono: ["'Open Sans'", ...defaultTheme.fontFamily.mono],
       },
       // create custom text colors here
       textColor: {
         fill: withOpacity("--text-fill"),
         muted: withOpacity("--text-muted"),
+        danger: withOpacity("--text-danger"),
         inverted: withOpacity("--text-inverted"),
+        accent: withOpacity("--text-accent"),
       },
       // create custom background colors here
       backgroundColor: {
         fill: withOpacity("--bg-fill"),
+        accent: withOpacity("--bg-accent"),
+        muted: withOpacity("--bg-muted"),
         footer: withOpacity("--bg-footer"),
-        "button-accent": withOpacity("--bg-button-accent"),
-        "button-accent-hover": withOpacity("--bg-button-accent-hover"),
-        "button-muted": withOpacity("--bg-button-muted"),
+        testimonials: withOpacity("--bg-testimonials"),
       },
       borderColor: {
         danger: withOpacity("--border-danger"),
+        accent: withOpacity("--border-accent"),
       },
       // create custom gradient color here
       gradientColorStops: {
-        hue: withOpacity("--color-fill"),
+        cyan: withOpacity("--cyan"),
+        blue: withOpacity("--blue"),
       },
     },
   },
   // custom variants
   variants: {
     extend: {
-      backgroundColor: ["active"],
+      // backgroundColor: ["active"],
     },
   },
   plugins: [
